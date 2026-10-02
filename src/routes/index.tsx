@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   Building2,
@@ -64,6 +64,25 @@ const styles = [
   ["Sports T-Shirt", "Designed for teams, tournaments, fitness and training programs."],
 ];
 
+const completeRange = [
+  "Company T-Shirts",
+  "Promotional T-Shirts",
+  "Event T-Shirts",
+  "School T-Shirts",
+  "College T-Shirts",
+  "Sports T-Shirts",
+  "Team T-Shirts",
+  "Custom Polo T-Shirts",
+  "Round-Neck T-Shirts",
+  "V-Neck T-Shirts",
+  "Branded Merchandise",
+  "Startup & Brand T-Shirts",
+  "Campaign T-Shirts",
+  "Festival T-Shirts",
+  "Personalized T-Shirts",
+  "Bulk Customized T-Shirts",
+];
+
 const process = [
   ["Share your requirement", "Tell us the purpose, quantity, style, sizes and colours."],
   ["Share your design", "Send your logo, artwork, reference image or concept."],
@@ -99,11 +118,19 @@ function SectionTitle({ eyebrow, title, intro, light = false }: { eyebrow: strin
 function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [sent, setSent] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const nav = [["About", "#about"], ["Products", "#products"], ["Customize", "#customize"], ["Process", "#process"]];
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <div className="min-h-screen overflow-x-hidden">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-ivory/10 bg-charcoal/95 text-ivory shadow-lg backdrop-blur-xl">
+      <header className={`fixed inset-x-0 top-0 z-50 border-b text-ivory backdrop-blur-xl transition-all duration-300 ${scrolled || menuOpen ? "border-ivory/10 bg-charcoal/95 shadow-lg" : "border-transparent bg-charcoal/55"}`}>
         <div className="mx-auto grid h-20 max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center px-5 sm:px-8">
           <div className="min-w-0 [&_span:first-of-type]:text-ivory"><Logo compact /></div>
           <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
@@ -174,6 +201,12 @@ function Index() {
                 <p className="mt-3 text-sm leading-7 text-ivory/65">{item.text}</p>
                 <a href="#contact" className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-primary">Enquire now <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></a>
               </article>)}
+            </div>
+            <div className="mt-12 border-y border-ivory/10 py-8">
+              <p className="text-center text-xs font-bold uppercase tracking-[0.22em] text-primary">Complete customized range</p>
+              <div className="mx-auto mt-6 flex max-w-5xl flex-wrap justify-center gap-2.5">
+                {completeRange.map((item) => <span key={item} className="rounded-full border border-ivory/15 px-4 py-2 text-xs text-ivory/65 transition-colors hover:border-primary/60 hover:text-primary">{item}</span>)}
+              </div>
             </div>
             <div className="mt-16 grid gap-6 md:grid-cols-2">
               <img src={corporateImage} alt="Corporate team in customized polo T-shirts" width={1024} height={1024} loading="lazy" className="aspect-[4/3] h-full w-full rounded-lg object-cover" />
