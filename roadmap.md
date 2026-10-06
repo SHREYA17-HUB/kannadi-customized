@@ -5,3 +5,6 @@
 - [x] Add the complete home, about, products, customization, process, benefits, contact, and footer experience
 - [x] Add relevant premium imagery and responsive navigation
 - [x] Verify desktop and mobile layouts, interactions, metadata, and browser icon
+- [x] Add correctly framed imagery for every product, T-shirt style, and customization service
+- [x] Refine About KANNADI imagery while preserving its full content and existing images
+- [x] Verify all new images and enquiry navigation on desktop and mobile

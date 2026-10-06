@@ -10,3 +10,5 @@
 <!-- LOVABLE:END -->
 
 - Keep KANNADI as a single-page, section-based marketing site because the source document describes one continuous sales journey.
+
+- Keep apparel imagery in the shared ApparelImage presentation with explicit dimensions and lazy loading; square catalogue framing preserves garment detail and consistent layout.
