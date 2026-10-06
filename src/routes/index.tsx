@@ -28,6 +28,18 @@ import heroImage from "@/assets/kannadi-hero.jpg";
 import corporateImage from "@/assets/kannadi-corporate.jpg";
 import sportsImage from "@/assets/kannadi-sports-events.jpg";
 import craftImage from "@/assets/kannadi-craft.jpg";
+import promotionalImage from "@/assets/kannadi-promotional.jpg";
+import eventImage from "@/assets/kannadi-event.jpg";
+import educationImage from "@/assets/kannadi-education.jpg";
+import merchandiseImage from "@/assets/kannadi-merchandise.jpg";
+import uniformsImage from "@/assets/kannadi-uniforms.jpg";
+import bulkImage from "@/assets/kannadi-bulk.jpg";
+import vneckImage from "@/assets/kannadi-vneck.jpg";
+import poloImage from "@/assets/kannadi-polo.jpg";
+import embroideryImage from "@/assets/kannadi-embroidery.jpg";
+import personalizedImage from "@/assets/kannadi-personalized.jpg";
+import sportsShirtImage from "@/assets/kannadi-sports-shirt.jpg";
+import festivalImage from "@/assets/kannadi-festival.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -53,6 +65,8 @@ export const Route = createFileRoute("/")({
 const collections = [
   {
     title: "Corporate T-Shirts",
+    image: corporateImage,
+    imageAlt: "Corporate team wearing coordinated polo T-shirts",
     tagline: "Professional T-shirts for modern teams.",
     text: "Create a unified, professional appearance for employees — ideal for everyday team activities, corporate events, conferences, exhibitions and special occasions. Customize with your company logo, brand colours, employee names, department details, slogans or custom graphics.",
     tags: ["Employee uniforms", "Conferences", "Product launches", "Brand activations", "Annual days", "Team building"],
@@ -60,6 +74,8 @@ const collections = [
   },
   {
     title: "Promotional T-Shirts",
+    image: promotionalImage,
+    imageAlt: "Burgundy promotional T-shirts with geometric artwork, front and back",
     tagline: "Make your marketing more visible.",
     text: "Carry your company logo, product name, campaign message, website, social handle and brand colours into marketing campaigns, brand activations, product launches and exhibitions — a consistent look for your promotional team.",
     tags: ["Campaigns", "Brand activations", "Exhibitions", "Promotional events"],
@@ -67,6 +83,8 @@ const collections = [
   },
   {
     title: "Event T-Shirts",
+    image: eventImage,
+    imageAlt: "Event volunteers wearing matching burgundy T-shirts",
     tagline: "Create a T-shirt people remember.",
     text: "Give your event its own identity with event names, dates, logos, graphics, sponsors, slogans and custom artwork — for corporate events, college fests, conferences, festivals, awareness campaigns, charity events and celebrations.",
     tags: ["College fests", "Festivals", "Workshops", "Charity events", "Special occasions"],
@@ -74,6 +92,8 @@ const collections = [
   },
   {
     title: "School & College T-Shirts",
+    image: educationImage,
+    imageAlt: "College students wearing matching green campus T-shirts",
     tagline: "Make campus events more memorable.",
     text: "Comfortable, recognizable T-shirts for school activities, house competitions, annual days and sports days — and for college fests, departments, clubs, batch years and farewell events. Add logos, house colours, student names and custom graphics.",
     tags: ["Annual days", "House colours", "Departments", "Batch years", "Farewells"],
@@ -81,6 +101,8 @@ const collections = [
   },
   {
     title: "Sports & Team T-Shirts",
+    image: sportsImage,
+    imageAlt: "Sports team wearing coordinated red and black T-shirts",
     tagline: "One team. One identity.",
     text: "Customized sports T-shirts for teams, clubs, tournaments, training and fitness groups — with team logos, player names and numbers, team colours, sponsor logos and tournament branding. Matching T-shirts for corporate teams, communities and volunteer groups too.",
     tags: ["Cricket", "Football", "Running groups", "Tournaments", "Fitness teams"],
@@ -88,6 +110,8 @@ const collections = [
   },
   {
     title: "Employee Uniforms",
+    image: uniformsImage,
+    imageAlt: "Retail staff wearing black polo uniforms with red detailing",
     tagline: "A consistent look for your workforce.",
     text: "Customized employee T-shirts with your company branding, in colours and designs that match your organization — for sales, delivery, retail, service, field, promotional and event teams.",
     tags: ["Sales teams", "Retail staff", "Field teams", "Service staff"],
@@ -95,6 +119,8 @@ const collections = [
   },
   {
     title: "Merchandise & Startup Brands",
+    image: merchandiseImage,
+    imageAlt: "Black and ivory merchandise T-shirts with custom graphic artwork",
     tagline: "Turn your creative ideas into merchandise.",
     text: "Transform your logo, illustrations, artwork, slogans and brand identity into wearable merchandise for brand promotions, community building, customer engagement and retail. For startups, T-shirts become part of your visual identity.",
     tags: ["Brand launches", "Creators", "Communities", "Customer merchandise"],
@@ -102,6 +128,8 @@ const collections = [
   },
   {
     title: "Campaign & Festival T-Shirts",
+    image: festivalImage,
+    imageAlt: "Community group wearing matching ivory celebration T-shirts",
     tagline: "Wear your message. Celebrate together.",
     text: "Custom T-shirts for awareness programs, social campaigns and community activities — and personalized celebration T-shirts with names, dates, messages, photos and artwork for festivals, reunions and family gatherings.",
     tags: ["Awareness campaigns", "Reunions", "Festivals", "Personalized gifts"],
@@ -109,6 +137,8 @@ const collections = [
   },
   {
     title: "Bulk Customized T-Shirts",
+    image: bulkImage,
+    imageAlt: "Organized stacks of customized T-shirts in different colours and sizes",
     tagline: "Custom T-shirts for large orders.",
     text: "Customized solutions for bulk requirements — corporate teams, college events, school programs, sports tournaments, promotional campaigns and brands. Bulk orders can include multiple sizes, colours, designs, individual names, player numbers and team branding.",
     tags: ["Multiple sizes", "Multiple designs", "Individual names", "Team branding"],
@@ -122,6 +152,18 @@ const styles = [
   ["V-Neck", "A contemporary alternative for customized team and corporate apparel."],
   ["Sports T-Shirt", "Designed for sports teams, tournaments, fitness activities and training programs."],
 ];
+
+const styleImages = [promotionalImage, poloImage, vneckImage, sportsShirtImage];
+const customizationImages = [embroideryImage, personalizedImage, merchandiseImage, bulkImage, personalizedImage, bulkImage];
+const customizationImageAlts = [
+  "Gold motif being embroidered onto black polo fabric",
+  "White number printed on a red and black sports jersey",
+  "Custom geometric artwork on black and ivory T-shirts",
+  "T-shirts arranged in black, burgundy, ivory and green colourways",
+  "Personalized sports jersey with a player number",
+  "Folded T-shirts organized into different sizes",
+];
+const industryImages = [corporateImage, educationImage, sportsImage, eventImage, promotionalImage, merchandiseImage];
 
 const customizationOptions = [
   ["Logo Customization", "Add your company, school, college, team, organization or brand logo."],
@@ -157,6 +199,14 @@ const whyChoose = [
   ["Brand-Focused Approach", "We help ensure your T-shirts reflect your visual identity and purpose."],
   ["Professional Service", "A structured process from initial requirement discussion to final delivery."],
 ];
+
+function ApparelImage({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
+  return (
+    <div className={`overflow-hidden bg-secondary ${className}`}>
+      <img src={src} alt={alt} width={1024} height={1024} loading="lazy" decoding="async" className="aspect-square h-auto w-full object-cover transition-transform duration-500 motion-safe:group-hover:scale-[1.025]" />
+    </div>
+  );
+}
 
 function Logo({ compact = false }: { compact?: boolean }) {
   return (
@@ -250,12 +300,22 @@ function Index() {
         {/* About + Founder */}
         <section id="about" className="bg-background py-16 sm:py-20">
           <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div className="relative">
-              <img src={craftImage} alt="Quality inspection of a customized polo T-shirt" width={1024} height={1024} loading="lazy" className="aspect-square w-full rounded-md object-cover shadow-premium" />
-              <div className="absolute -bottom-5 -right-3 max-w-52 rounded-md border border-primary/40 bg-charcoal p-5 text-ivory shadow-premium sm:-right-5">
-                <ShieldCheck className="mb-3 text-primary" />
-                <p className="font-display text-lg leading-tight">Creative ideas. Professional quality.</p>
-              </div>
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <figure className="group col-span-2 overflow-hidden rounded-md border border-border">
+                <ApparelImage src={craftImage} alt="Close-up of polo T-shirt finishing and quality inspection" />
+                <figcaption className="flex items-center gap-3 border-t border-primary/30 bg-charcoal px-5 py-4 text-ivory">
+                  <ShieldCheck className="h-5 w-5 shrink-0 text-primary" />
+                  <span className="font-display text-lg">Creative ideas. Professional quality.</span>
+                </figcaption>
+              </figure>
+              <figure className="group">
+                <ApparelImage src={embroideryImage} alt="Detailed gold embroidery on black polo fabric" className="rounded-md border border-border" />
+                <figcaption className="mt-2 text-xs text-muted-foreground">Logo customization</figcaption>
+              </figure>
+              <figure className="group">
+                <ApparelImage src={poloImage} alt="Burgundy custom polo showing its collar and fabric finishing" className="rounded-md border border-border" />
+                <figcaption className="mt-2 text-xs text-muted-foreground">Apparel shaped around your identity</figcaption>
+              </figure>
             </div>
             <div className="lg:pl-8">
               <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-primary">About KANNADI</p>
@@ -275,21 +335,22 @@ function Index() {
         <section id="collection" className="bg-charcoal py-16 text-ivory sm:py-20">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <SectionTitle eyebrow="Our Products" title="Customized T-Shirts & Apparel for Every Requirement" intro="We help transform your logo, artwork, brand identity, event concept or creative idea into customized apparel designed around your requirements." light />
-            <div className="mt-10 grid gap-px overflow-hidden rounded-md border border-ivory/10 bg-primary/25 md:grid-cols-2 lg:grid-cols-3">
-              {collections.map((item) => <article key={item.title} className="group flex flex-col bg-charcoal p-7 transition-colors hover:bg-ivory/5">
-                <item.icon className="h-6 w-6 text-primary" />
-                <h3 className="mt-5 font-display text-xl font-semibold">{item.title}</h3>
+            <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {collections.map((item) => <article key={item.title} className="group flex flex-col overflow-hidden rounded-md border border-ivory/15 bg-charcoal transition-colors hover:border-primary/50">
+                <ApparelImage src={item.image} alt={item.imageAlt} />
+                <div className="flex flex-1 flex-col p-6">
+                <div className="flex items-center gap-3">
+                  <item.icon className="h-5 w-5 shrink-0 text-primary" />
+                  <h3 className="font-display text-xl font-semibold">{item.title}</h3>
+                </div>
                 <p className="mt-1 font-display text-sm italic text-primary/85">{item.tagline}</p>
                 <p className="mt-3 text-[13px] leading-6 text-ivory/65">{item.text}</p>
                 <div className="mt-4 flex flex-wrap gap-1.5">
                   {item.tags.map((tag) => <span key={tag} className="rounded-full border border-ivory/15 px-2.5 py-1 text-[10px] uppercase tracking-wider text-ivory/55">{tag}</span>)}
                 </div>
                 <a href="#contact" className="mt-auto inline-flex items-center gap-2 pt-5 text-[13px] font-semibold text-primary">Enquire now <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></a>
+                </div>
               </article>)}
-            </div>
-            <div className="mt-10 grid gap-5 md:grid-cols-2">
-              <img src={corporateImage} alt="Corporate team in customized polo T-shirts" width={1024} height={1024} loading="lazy" className="aspect-[4/3] h-full w-full rounded-md object-cover" />
-              <img src={sportsImage} alt="Sports team in customized red and black T-shirts" width={1024} height={1024} loading="lazy" className="aspect-[4/3] h-full w-full rounded-md object-cover" />
             </div>
           </div>
         </section>
@@ -299,10 +360,12 @@ function Index() {
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <SectionTitle eyebrow="T-Shirt Styles" title="Choose the Style That Fits Your Requirement" intro="Depending on your requirement, customized apparel can be developed in different styles." />
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {styles.map(([name, text], index) => <article key={name} className="rounded-md border border-border bg-card p-6 shadow-sm transition-transform hover:-translate-y-1">
-                <span className="font-display text-3xl text-primary/45">0{index + 1}</span>
-                <h3 className="mt-3 font-display text-xl font-semibold">{name}</h3>
-                <p className="mt-2 text-[13px] leading-6 text-muted-foreground">{text}</p>
+              {styles.map(([name, text], index) => <article key={name} className="group overflow-hidden rounded-md border border-border bg-card transition-colors hover:border-primary/60">
+                <ApparelImage src={styleImages[index]} alt={`${name} T-shirt showing its neckline, sleeves and full silhouette`} />
+                <div className="p-5">
+                  <div className="flex items-center justify-between gap-3"><h3 className="font-display text-xl font-semibold">{name}</h3><span className="text-xs text-primary">0{index + 1}</span></div>
+                  <p className="mt-2 text-[13px] leading-6 text-muted-foreground">{text}</p>
+                </div>
               </article>)}
             </div>
             <div className="mt-12 grid gap-8 rounded-md border border-primary/30 bg-secondary p-7 sm:p-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
@@ -311,8 +374,11 @@ function Index() {
                 <h3 className="mt-3 text-balance font-display text-2xl font-semibold leading-tight sm:text-3xl">T-Shirts That Tell Your Story</h3>
                 <p className="mt-4 text-sm leading-7 text-muted-foreground">Designed around a specific occasion, campaign, event, group or creative concept, our theme T-shirts help create a strong and unified visual identity — for corporate events, college fests, school programs, sports activities, festivals, awareness campaigns, family celebrations, team outings and special occasions.</p>
               </div>
-              <div className="flex flex-wrap gap-2">
+              <div>
+                <ApparelImage src={festivalImage} alt="Matching theme T-shirts for a group celebration" className="mb-5 rounded-md border border-border" />
+                <div className="flex flex-wrap gap-2">
                 {["Theme", "Colours", "Graphics", "Artwork", "Text", "Logo", "Slogan", "Event Name", "Names & Numbers", "Custom Design"].map((item) => <span key={item} className="rounded-full border border-border bg-card px-4 py-2 text-xs font-medium text-foreground/75 transition-colors hover:border-primary/60 hover:text-primary">{item}</span>)}
+                </div>
               </div>
             </div>
           </div>
@@ -321,19 +387,25 @@ function Index() {
         {/* Customization */}
         <section id="customize" className="bg-charcoal py-16 text-ivory sm:py-20">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
-            <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+            <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
               <div>
                 <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-primary">Create Your T-Shirt Your Way</p>
                 <h2 className="mt-3 text-balance font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">Every detail, made to represent you.</h2>
                 <p className="mt-4 text-sm leading-7 text-ivory/70">Customize your T-shirts by design, logo, artwork, graphics, text, brand colours, team names, player names, numbers, event details, size, style, fabric and quantity. From a simple logo T-shirt to a completely customized design, we help create apparel that matches your requirements.</p>
                 <Button variant="hero" size="lg" className="mt-7" asChild><a href="#contact">Create Something Truly Yours <ArrowRight /></a></Button>
+                <figure className="group mt-8">
+                  <ApparelImage src={embroideryImage} alt="Gold embroidery being applied to a black custom polo" className="rounded-md border border-ivory/15" />
+                  <figcaption className="mt-3 font-display text-lg italic text-ivory/65">Your design. Your brand. Your T-shirt.</figcaption>
+                </figure>
               </div>
-              <div className="grid gap-px overflow-hidden rounded-md border border-ivory/10 bg-primary/25 sm:grid-cols-2">
-                {customizationOptions.map(([title, text]) => <div key={title} className="bg-charcoal p-6">
-                  <Palette className="h-5 w-5 text-primary" />
-                  <h3 className="mt-4 font-display text-lg font-semibold">{title}</h3>
-                  <p className="mt-2 text-[13px] leading-6 text-ivory/60">{text}</p>
-                </div>)}
+              <div className="grid gap-4 sm:grid-cols-2">
+                {customizationOptions.map(([title, text], index) => <article key={title} className="group overflow-hidden rounded-md border border-ivory/15 bg-charcoal transition-colors hover:border-primary/50">
+                  <ApparelImage src={customizationImages[index]} alt={customizationImageAlts[index]} />
+                  <div className="p-5">
+                    <div className="flex items-start gap-2"><Palette className="mt-1 h-4 w-4 shrink-0 text-primary" /><h3 className="font-display text-lg font-semibold">{title}</h3></div>
+                    <p className="mt-2 text-[13px] leading-6 text-ivory/60">{text}</p>
+                  </div>
+                </article>)}
               </div>
             </div>
           </div>
@@ -344,9 +416,9 @@ function Index() {
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <SectionTitle eyebrow="Customized T-Shirts for Every Industry" title="Built for every industry." />
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {industries.map(([title, text]) => <article key={title} className="border-t-2 border-primary bg-card p-6 shadow-sm">
-                <h3 className="font-display text-xl font-semibold">{title}</h3>
-                <p className="mt-2 text-[13px] leading-6 text-muted-foreground">{text}</p>
+              {industries.map(([title, text], index) => <article key={title} className="group grid grid-cols-[96px_1fr] overflow-hidden rounded-md border border-border bg-card sm:grid-cols-[112px_1fr]">
+                <ApparelImage src={industryImages[index]} alt={`Custom T-shirts for ${title.toLowerCase()}`} className="h-full [&_img]:h-full [&_img]:aspect-auto" />
+                <div className="min-w-0 p-4"><h3 className="font-display text-lg font-semibold">{title}</h3><p className="mt-2 text-[13px] leading-6 text-muted-foreground">{text}</p></div>
               </article>)}
             </div>
           </div>
