@@ -361,7 +361,7 @@ function Index() {
             <SectionTitle eyebrow="T-Shirt Styles" title="Choose the Style That Fits Your Requirement" intro="Depending on your requirement, customized apparel can be developed in different styles." />
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {styles.map(([name, text], index) => <article key={name} className="group overflow-hidden rounded-md border border-border bg-card transition-colors hover:border-primary/60">
-                <ApparelImage src={styleImages[index]} alt={`${name} T-shirt showing its neckline, sleeves and full silhouette`} />
+                <ApparelImage src={styleImages[index] ?? promotionalImage} alt={`${name} T-shirt showing its neckline, sleeves and full silhouette`} />
                 <div className="p-5">
                   <div className="flex items-center justify-between gap-3"><h3 className="font-display text-xl font-semibold">{name}</h3><span className="text-xs text-primary">0{index + 1}</span></div>
                   <p className="mt-2 text-[13px] leading-6 text-muted-foreground">{text}</p>
@@ -400,7 +400,7 @@ function Index() {
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 {customizationOptions.map(([title, text], index) => <article key={title} className="group overflow-hidden rounded-md border border-ivory/15 bg-charcoal transition-colors hover:border-primary/50">
-                  <ApparelImage src={customizationImages[index]} alt={customizationImageAlts[index]} />
+                  <ApparelImage src={customizationImages[index] ?? embroideryImage} alt={customizationImageAlts[index] ?? "Customized apparel detail"} />
                   <div className="p-5">
                     <div className="flex items-start gap-2"><Palette className="mt-1 h-4 w-4 shrink-0 text-primary" /><h3 className="font-display text-lg font-semibold">{title}</h3></div>
                     <p className="mt-2 text-[13px] leading-6 text-ivory/60">{text}</p>
@@ -417,7 +417,7 @@ function Index() {
             <SectionTitle eyebrow="Customized T-Shirts for Every Industry" title="Built for every industry." />
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {industries.map(([title, text], index) => <article key={title} className="group grid grid-cols-[96px_1fr] overflow-hidden rounded-md border border-border bg-card sm:grid-cols-[112px_1fr]">
-                <ApparelImage src={industryImages[index]} alt={`Custom T-shirts for ${title.toLowerCase()}`} className="h-full [&_img]:h-full [&_img]:aspect-auto" />
+                <ApparelImage src={industryImages[index] ?? corporateImage} alt={`Custom T-shirts for ${title?.toLowerCase() ?? "teams"}`} className="h-full [&_img]:h-full [&_img]:aspect-auto" />
                 <div className="min-w-0 p-4"><h3 className="font-display text-lg font-semibold">{title}</h3><p className="mt-2 text-[13px] leading-6 text-muted-foreground">{text}</p></div>
               </article>)}
             </div>
