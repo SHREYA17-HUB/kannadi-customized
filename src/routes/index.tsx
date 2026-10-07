@@ -228,8 +228,8 @@ function SectionTitle({ eyebrow, title, intro, light = false }: { eyebrow: strin
     <div className="mx-auto max-w-2xl text-center">
       <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-primary">{eyebrow}</p>
       <h2 className={`mt-3 text-balance font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl ${light ? "text-ivory" : "text-foreground"}`}>{title}</h2>
-      {intro && <p className={`mx-auto mt-4 max-w-xl text-sm leading-7 ${light ? "text-ivory/70" : "text-muted-foreground"}`}>{intro}</p>}
-      <div className="gold-rule mx-auto mt-6 h-px w-28" />
+      {intro && <p className={`mx-auto mt-3 max-w-xl text-sm leading-6 ${light ? "text-ivory/70" : "text-muted-foreground"}`}>{intro}</p>}
+      <div className="gold-rule mx-auto mt-4 h-px w-28" />
     </div>
   );
 }
@@ -275,27 +275,27 @@ function Index() {
 
       <main>
         {/* Hero */}
-        <section id="home" className="relative min-h-[640px] overflow-hidden bg-charcoal pt-[72px] text-ivory">
+        <section id="home" className="relative min-h-[580px] overflow-hidden bg-charcoal pt-[72px] text-ivory">
           <img src={heroImage} alt="A team wearing premium customized KANNADI-style apparel" width={1536} height={1024} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover object-[68%_top]" />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--charcoal)_0%,color-mix(in_oklab,var(--charcoal)_92%,transparent)_38%,color-mix(in_oklab,var(--charcoal)_28%,transparent)_72%,color-mix(in_oklab,var(--charcoal)_55%,transparent)_100%)]" />
           <div className="heritage-pattern absolute inset-y-0 left-0 w-1/2 opacity-30" />
-          <div className="relative mx-auto flex min-h-[568px] max-w-7xl items-center px-5 py-16 sm:px-8">
+          <div className="relative mx-auto flex min-h-[508px] max-w-7xl items-center px-5 py-10 sm:px-8">
             <div className="reveal max-w-2xl">
-              <div className="mb-6 flex items-center gap-3"><span className="h-px w-10 bg-primary" /><span className="text-[11px] font-bold uppercase tracking-[0.26em] text-primary">Custom T-Shirt Manufacturer in Bangalore</span></div>
+              <div className="mb-4 flex items-center gap-3"><span className="h-px w-10 bg-primary" /><span className="text-[11px] font-bold uppercase tracking-[0.26em] text-primary">Custom T-Shirt Manufacturer in Bangalore</span></div>
               <h1 className="text-balance font-display text-4xl font-semibold leading-[1.02] tracking-tight sm:text-5xl lg:text-6xl">Customized T-Shirts That Make Your <span className="text-primary">Brand Stand Out.</span></h1>
               <p className="mt-5 max-w-xl text-[15px] leading-7 text-ivory/75">Bring your ideas to life with KANNADI — your trusted partner for customized T-shirts in Bangalore. From your logo and brand colours to custom artwork, text and designs, we create T-shirts that reflect your identity, purpose and style.</p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <Button variant="hero" size="lg" asChild><a href="#contact">Get a Quote <ArrowRight /></a></Button>
                 <Button variant="heroOutline" size="lg" asChild><a href="#collection">Explore the Collection</a></Button>
               </div>
-              <p className="mt-8 font-display text-lg italic text-ivory/65">Your design. Your brand. Your T-shirt.</p>
+              <p className="mt-5 font-display text-lg italic text-ivory/65">Your design. Your brand. Your T-shirt.</p>
             </div>
           </div>
           <div className="absolute bottom-0 inset-x-0 h-px bg-primary/50" />
         </section>
 
         {/* Intro statement */}
-        <section className="border-b border-border bg-background py-12 sm:py-16">
+        <section className="border-b border-border bg-background py-7 sm:py-9">
           <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[1fr_1.2fr] lg:items-center">
             <h2 className="text-balance font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">A great T-shirt does more than look good — <span className="text-brand-red">it creates identity.</span></h2>
             <div>
@@ -306,10 +306,10 @@ function Index() {
         </section>
 
         {/* About + Founder */}
-        <section id="about" className="bg-background py-16 sm:py-20">
-          <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              <figure className="group col-span-2 overflow-hidden rounded-md border border-border">
+        <section id="about" className="bg-background py-10 sm:py-12">
+          <div className="mx-auto grid max-w-7xl gap-6 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+            <div className="grid grid-cols-[1.6fr_1fr] items-start gap-3">
+              <figure className="group row-span-2 overflow-hidden rounded-md border border-border">
                 <ApparelImage src={craftImage} alt="Close-up of polo T-shirt finishing and quality inspection" />
                 <figcaption className="flex items-center gap-3 border-t border-primary/30 bg-charcoal px-5 py-4 text-ivory">
                   <ShieldCheck className="h-5 w-5 shrink-0 text-primary" />
@@ -325,7 +325,7 @@ function Index() {
                 <figcaption className="mt-2 text-xs text-muted-foreground">Apparel shaped around your identity</figcaption>
               </figure>
             </div>
-            <div className="lg:pl-8">
+            <div className="lg:pl-2">
               <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-primary">About KANNADI</p>
               <h2 className="mt-3 text-balance font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">Customized T-Shirts. Creative Ideas. Professional Quality.</h2>
               <p className="mt-5 text-sm leading-7 text-muted-foreground">KANNADI is a customized T-shirt and apparel solutions company focused on helping businesses, organizations, institutions, teams and individuals bring their ideas to life through professionally customized T-shirts — corporate, promotional, event, school and college, sports, branded merchandise and more.</p>
@@ -340,13 +340,13 @@ function Index() {
         </section>
 
         {/* Collection */}
-        <section id="collection" className="bg-charcoal py-16 text-ivory sm:py-20">
+        <section id="collection" className="bg-charcoal py-10 text-ivory sm:py-12">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <SectionTitle eyebrow="Our Products" title="Customized T-Shirts & Apparel for Every Requirement" intro="We help transform your logo, artwork, brand identity, event concept or creative idea into customized apparel designed around your requirements." light />
-            <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-7 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {collections.map((item) => <article key={item.title} className="group flex flex-col overflow-hidden rounded-md border border-ivory/15 bg-charcoal transition-colors hover:border-primary/50">
                 <ApparelImage src={item.image} alt={item.imageAlt} />
-                <div className="flex flex-1 flex-col p-6">
+                <div className="flex flex-1 flex-col p-5">
                 <div className="flex items-center gap-3">
                   <item.icon className="h-5 w-5 shrink-0 text-primary" />
                   <h3 className="font-display text-xl font-semibold">{item.title}</h3>
@@ -364,10 +364,10 @@ function Index() {
         </section>
 
         {/* Styles + Theme T-Shirts */}
-        <section className="bg-background py-16 sm:py-20">
+        <section className="bg-background py-10 sm:py-12">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <SectionTitle eyebrow="T-Shirt Styles" title="Choose the Style That Fits Your Requirement" intro="Depending on your requirement, customized apparel can be developed in different styles." />
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {styles.map(([name, text], index) => <article key={name} className="group overflow-hidden rounded-md border border-border bg-card transition-colors hover:border-primary/60">
                 <ApparelImage src={styleImages[index] ?? promotionalImage} alt={`${name} T-shirt showing its neckline, sleeves and full silhouette`} />
                 <div className="p-5">
@@ -376,37 +376,36 @@ function Index() {
                 </div>
               </article>)}
             </div>
-            <div className="mt-12 grid gap-8 rounded-md border border-primary/30 bg-secondary p-7 sm:p-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div className="mt-8 grid gap-6 border-y border-primary/30 py-7 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div>
                 <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-primary">Theme T-Shirts</p>
                 <h3 className="mt-3 text-balance font-display text-2xl font-semibold leading-tight sm:text-3xl">T-Shirts That Tell Your Story</h3>
                 <p className="mt-4 text-sm leading-7 text-muted-foreground">Designed around a specific occasion, campaign, event, group or creative concept, our theme T-shirts help create a strong and unified visual identity — for corporate events, college fests, school programs, sports activities, festivals, awareness campaigns, family celebrations, team outings and special occasions.</p>
-              </div>
-              <div>
-                <ApparelImage src={festivalImage} alt="Matching theme T-shirts for a group celebration" className="mb-5 rounded-md border border-border" />
-                <div className="flex flex-wrap gap-2">
-                {["Theme", "Colours", "Graphics", "Artwork", "Text", "Logo", "Slogan", "Event Name", "Names & Numbers", "Custom Design"].map((item) => <span key={item} className="rounded-full border border-border bg-card px-4 py-2 text-xs font-medium text-foreground/75 transition-colors hover:border-primary/60 hover:text-primary">{item}</span>)}
+                <div className="mt-4 flex flex-wrap gap-2">
+                {["Theme", "Colours", "Graphics", "Artwork", "Text", "Logo", "Slogan", "Event Name", "Names & Numbers", "Custom Design"].map((item) => <span key={item} className="border-b border-border px-2 py-1 text-xs font-medium text-foreground/75">{item}</span>)}
                 </div>
               </div>
+              <ApparelImage src={festivalImage} alt="Matching theme T-shirts for a group celebration" className="group rounded-md border border-border" />
             </div>
           </div>
         </section>
 
         {/* Customization */}
-        <section id="customize" className="bg-charcoal py-16 text-ivory sm:py-20">
+        <section id="customize" className="bg-charcoal py-10 text-ivory sm:py-12">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
-            <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+            <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div>
                 <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-primary">Create Your T-Shirt Your Way</p>
                 <h2 className="mt-3 text-balance font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">Every detail, made to represent you.</h2>
                 <p className="mt-4 text-sm leading-7 text-ivory/70">Customize your T-shirts by design, logo, artwork, graphics, text, brand colours, team names, player names, numbers, event details, size, style, fabric and quantity. From a simple logo T-shirt to a completely customized design, we help create apparel that matches your requirements.</p>
                 <Button variant="hero" size="lg" className="mt-7" asChild><a href="#contact">Create Something Truly Yours <ArrowRight /></a></Button>
-                <figure className="group mt-8">
+              </div>
+                <figure className="group">
                   <ApparelImage src={embroideryImage} alt="Gold embroidery being applied to a black custom polo" className="rounded-md border border-ivory/15" />
                   <figcaption className="mt-3 font-display text-lg italic text-ivory/65">Your design. Your brand. Your T-shirt.</figcaption>
                 </figure>
-              </div>
-              <div className="grid gap-4 sm:grid-cols-2">
+            </div>
+              <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {customizationOptions.map(([title, text], index) => <article key={title} className="group overflow-hidden rounded-md border border-ivory/15 bg-charcoal transition-colors hover:border-primary/50">
                   <ApparelImage src={customizationImages[index] ?? embroideryImage} alt={customizationImageAlts[index] ?? "Customized apparel detail"} />
                   <div className="p-5">
@@ -415,15 +414,14 @@ function Index() {
                   </div>
                 </article>)}
               </div>
-            </div>
           </div>
         </section>
 
         {/* Industries */}
-        <section className="bg-background py-16 sm:py-20">
+        <section className="bg-background py-10 sm:py-12">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <SectionTitle eyebrow="Customized T-Shirts for Every Industry" title="Built for every industry." />
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {industries.map(([title, text], index) => <article key={title} className="group grid grid-cols-[96px_1fr] overflow-hidden rounded-md border border-border bg-card sm:grid-cols-[112px_1fr]">
                 <ApparelImage src={industryImages[index] ?? corporateImage} alt={`Custom T-shirts for ${title?.toLowerCase() ?? "teams"}`} className="h-full [&_img]:h-full [&_img]:aspect-auto" />
                 <div className="min-w-0 p-4"><h3 className="font-display text-lg font-semibold">{title}</h3><p className="mt-2 text-[13px] leading-6 text-muted-foreground">{text}</p></div>
@@ -433,10 +431,10 @@ function Index() {
         </section>
 
         {/* Process */}
-        <section id="process" className="bg-secondary py-16 sm:py-20">
+        <section id="process" className="bg-secondary py-10 sm:py-12">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <SectionTitle eyebrow="From Your Design to Your T-Shirt" title="A simple customization process." />
-            <ol className="mt-12 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+            <ol className="mt-8 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
               {process.map(([title, text], index) => <li key={title} className="relative border-t border-primary pt-6">
                 <span className="absolute -top-4 left-0 grid h-8 w-8 place-items-center rounded-full bg-charcoal text-xs font-bold text-primary">{index + 1}</span>
                 <h3 className="font-display text-xl font-semibold">{title}</h3>
@@ -447,10 +445,10 @@ function Index() {
         </section>
 
         {/* Why choose */}
-        <section className="bg-background py-16 sm:py-20">
+        <section className="bg-background py-10 sm:py-12">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <SectionTitle eyebrow="Why Choose KANNADI?" title="Professional service, shaped around your requirement." />
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
               {whyChoose.map(([title, text]) => <article key={title} className="rounded-md border border-border bg-card p-5 shadow-sm">
                 <Check className="h-5 w-5 text-brand-red" />
                 <h3 className="mt-4 font-display text-lg font-semibold leading-snug">{title}</h3>
@@ -461,9 +459,9 @@ function Index() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="relative bg-charcoal py-16 text-ivory sm:py-20">
+        <section id="contact" className="relative bg-charcoal py-10 text-ivory sm:py-12">
           <div className="heritage-pattern absolute inset-0 opacity-25" />
-          <div className="relative mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="relative mx-auto grid max-w-7xl gap-6 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
               <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-primary">Contact KANNADI</p>
               <h2 className="mt-3 text-balance font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">Let’s Create Your Customized T-Shirt</h2>
@@ -489,7 +487,7 @@ function Index() {
         </section>
       </main>
 
-      <footer className="border-t border-primary/25 bg-charcoal py-10 text-ivory">
+      <footer className="border-t border-primary/25 bg-charcoal py-7 text-ivory">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 md:grid-cols-[1fr_auto] md:items-end">
           <div className="[&_span:first-of-type]:text-ivory"><Logo /><p className="mt-4 max-w-md text-sm leading-7 text-ivory/55">Customized T-shirts and apparel for businesses, institutions, teams, events and brands in Bangalore.</p><div className="mt-6 flex items-center gap-3">{socials.map(({ label, href, Icon }) => <a key={label} href={href} aria-label={`KANNADI on ${label}`} className="flex h-9 w-9 items-center justify-center rounded-full border border-ivory/15 text-ivory/60 transition-colors hover:border-primary hover:text-primary"><Icon className="h-4 w-4" /></a>)}</div></div>
           <div className="md:text-right"><div className="flex flex-wrap gap-5 text-sm text-ivory/65 md:justify-end">{nav.map(([label, href]) => <a key={href} href={href} className="hover:text-primary">{label}</a>)}<a href="#contact" className="hover:text-primary">Contact</a></div><p className="mt-4 text-xs text-ivory/40">© {new Date().getFullYear()} KANNADI. All rights reserved.</p></div>

@@ -8,3 +8,5 @@
 - [x] Add correctly framed imagery for every product, T-shirt style, and customization service
 - [x] Refine About KANNADI imagery while preserving its full content and existing images
 - [x] Verify all new images and enquiry navigation on desktop and mobile
+- [ ] Reduce section spacing and rebalance image-heavy layouts without removing content
+- [ ] Verify the compact layout and enquiry navigation
