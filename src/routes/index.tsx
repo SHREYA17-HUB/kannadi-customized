@@ -406,9 +406,9 @@ function Index() {
                 </figure>
             </div>
               <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {customizationOptions.map(([title, text], index) => <article key={title} className="group overflow-hidden rounded-md border border-ivory/15 bg-charcoal transition-colors hover:border-primary/50">
+                {customizationOptions.map(([title, text], index) => <article key={title} className="group grid grid-cols-[112px_minmax(0,1fr)] items-center overflow-hidden rounded-md border border-ivory/15 bg-charcoal transition-colors hover:border-primary/50 sm:grid-cols-[96px_minmax(0,1fr)] lg:grid-cols-[128px_minmax(0,1fr)]">
                   <ApparelImage src={customizationImages[index] ?? embroideryImage} alt={customizationImageAlts[index] ?? "Customized apparel detail"} />
-                  <div className="p-5">
+                  <div className="min-w-0 p-3">
                     <div className="flex items-start gap-2"><Palette className="mt-1 h-4 w-4 shrink-0 text-primary" /><h3 className="font-display text-lg font-semibold">{title}</h3></div>
                     <p className="mt-2 text-[13px] leading-6 text-ivory/60">{text}</p>
                   </div>
