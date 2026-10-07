@@ -5,7 +5,9 @@ import {
   Building2,
   Check,
   ChevronRight,
+  Facebook,
   GraduationCap,
+  Instagram,
   Layers3,
   Megaphone,
   Menu,
@@ -18,6 +20,7 @@ import {
   Trophy,
   Users,
   X,
+  Youtube,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -236,6 +239,11 @@ function Index() {
   const [sent, setSent] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const nav = [["About", "#about"], ["Collection", "#collection"], ["Customize", "#customize"], ["Process", "#process"]];
+  const socials = [
+    { label: "Instagram", href: "#", Icon: Instagram },
+    { label: "YouTube", href: "#", Icon: Youtube },
+    { label: "Facebook", href: "#", Icon: Facebook },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -268,7 +276,7 @@ function Index() {
       <main>
         {/* Hero */}
         <section id="home" className="relative min-h-[640px] overflow-hidden bg-charcoal pt-[72px] text-ivory">
-          <img src={heroImage} alt="A team wearing premium customized KANNADI-style apparel" width={1536} height={1024} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover object-[68%_center]" />
+          <img src={heroImage} alt="A team wearing premium customized KANNADI-style apparel" width={1536} height={1024} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover object-[68%_top]" />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--charcoal)_0%,color-mix(in_oklab,var(--charcoal)_92%,transparent)_38%,color-mix(in_oklab,var(--charcoal)_28%,transparent)_72%,color-mix(in_oklab,var(--charcoal)_55%,transparent)_100%)]" />
           <div className="heritage-pattern absolute inset-y-0 left-0 w-1/2 opacity-30" />
           <div className="relative mx-auto flex min-h-[568px] max-w-7xl items-center px-5 py-16 sm:px-8">
@@ -461,6 +469,12 @@ function Index() {
               <h2 className="mt-3 text-balance font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">Let’s Create Your Customized T-Shirt</h2>
               <p className="mt-5 max-w-lg text-sm leading-7 text-ivory/70">Looking for customized T-shirts in Bangalore for your company, event, school, college, sports team, promotional campaign, organization or brand? KANNADI is ready to help you turn your ideas into professionally customized T-shirts. Share your requirements and our team will help you with the next steps.</p>
               <div className="mt-7 flex items-center gap-3 text-sm text-primary"><Send className="h-5 w-5" /> Get a quote · Send your design · Enquire now</div>
+              <div className="mt-6 flex items-center gap-3">
+                <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-ivory/45">Follow KANNADI</span>
+                {socials.map(({ label, href, Icon }) => (
+                  <a key={label} href={href} aria-label={`KANNADI on ${label}`} className="flex h-9 w-9 items-center justify-center rounded-full border border-ivory/20 text-ivory/70 transition-colors hover:border-primary hover:text-primary"><Icon className="h-4 w-4" /></a>
+                ))}
+              </div>
             </div>
             <form className="rounded-md border border-ivory/15 bg-ivory/5 p-6 backdrop-blur-sm sm:p-7" onSubmit={(event) => { event.preventDefault(); setSent(true); }}>
               <div className="grid gap-4 sm:grid-cols-2">
@@ -477,7 +491,7 @@ function Index() {
 
       <footer className="border-t border-primary/25 bg-charcoal py-10 text-ivory">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 md:grid-cols-[1fr_auto] md:items-end">
-          <div className="[&_span:first-of-type]:text-ivory"><Logo /><p className="mt-4 max-w-md text-sm leading-7 text-ivory/55">Customized T-shirts and apparel for businesses, institutions, teams, events and brands in Bangalore.</p></div>
+          <div className="[&_span:first-of-type]:text-ivory"><Logo /><p className="mt-4 max-w-md text-sm leading-7 text-ivory/55">Customized T-shirts and apparel for businesses, institutions, teams, events and brands in Bangalore.</p><div className="mt-6 flex items-center gap-3">{socials.map(({ label, href, Icon }) => <a key={label} href={href} aria-label={`KANNADI on ${label}`} className="flex h-9 w-9 items-center justify-center rounded-full border border-ivory/15 text-ivory/60 transition-colors hover:border-primary hover:text-primary"><Icon className="h-4 w-4" /></a>)}</div></div>
           <div className="md:text-right"><div className="flex flex-wrap gap-5 text-sm text-ivory/65 md:justify-end">{nav.map(([label, href]) => <a key={href} href={href} className="hover:text-primary">{label}</a>)}<a href="#contact" className="hover:text-primary">Contact</a></div><p className="mt-4 text-xs text-ivory/40">© {new Date().getFullYear()} KANNADI. All rights reserved.</p></div>
         </div>
       </footer>
