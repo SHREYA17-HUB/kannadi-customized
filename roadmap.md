@@ -10,3 +10,5 @@
 - [x] Verify all new images and enquiry navigation on desktop and mobile
 - [x] Reduce section spacing and rebalance image-heavy layouts without removing content
 - [x] Verify the compact layout and enquiry navigation
+- [x] Apply spacing-only refinements while preserving all existing design and content
+- [x] Verify desktop, tablet, mobile, and a single footer social area
