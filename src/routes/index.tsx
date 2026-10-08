@@ -467,12 +467,6 @@ function Index() {
               <h2 className="mt-3 text-balance font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">Let’s Create Your Customized T-Shirt</h2>
               <p className="mt-5 max-w-lg text-sm leading-7 text-ivory/70">Looking for customized T-shirts in Bangalore for your company, event, school, college, sports team, promotional campaign, organization or brand? KANNADI is ready to help you turn your ideas into professionally customized T-shirts. Share your requirements and our team will help you with the next steps.</p>
               <div className="mt-7 flex items-center gap-3 text-sm text-primary"><Send className="h-5 w-5" /> Get a quote · Send your design · Enquire now</div>
-              <div className="mt-6 flex items-center gap-3">
-                <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-ivory/45">Follow KANNADI</span>
-                {socials.map(({ label, href, Icon }) => (
-                  <a key={label} href={href} aria-label={`KANNADI on ${label}`} className="flex h-9 w-9 items-center justify-center rounded-full border border-ivory/20 text-ivory/70 transition-colors hover:border-primary hover:text-primary"><Icon className="h-4 w-4" /></a>
-                ))}
-              </div>
             </div>
             <form className="rounded-md border border-ivory/15 bg-ivory/5 p-6 backdrop-blur-sm sm:p-7" onSubmit={(event) => { event.preventDefault(); setSent(true); }}>
               <div className="grid gap-4 sm:grid-cols-2">
