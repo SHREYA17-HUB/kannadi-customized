@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import {
   ArrowRight,
+  Award,
   Building2,
   Check,
   ChevronRight,
@@ -324,6 +325,10 @@ function Index() {
                 <ApparelImage src={poloImage} alt="Burgundy custom polo showing its collar and fabric finishing" className="rounded-md border border-border" />
                 <figcaption className="mt-2 text-xs text-muted-foreground">Apparel shaped around your identity</figcaption>
               </figure>
+              <div className="col-span-2 flex items-center gap-3 rounded-md border border-border bg-charcoal px-4 py-3 text-ivory">
+                <Award className="h-5 w-5 shrink-0 text-primary" />
+                <p className="text-xs leading-6 text-ivory/75"><span className="font-semibold text-primary">12+ years</span> of leadership experience across HCL, DELL, NTT DATA and Perot Systems — now dedicated to KANNADI.</p>
+              </div>
             </div>
             <div className="lg:pl-2">
               <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-primary">About KANNADI</p>
@@ -385,7 +390,7 @@ function Index() {
                 {["Theme", "Colours", "Graphics", "Artwork", "Text", "Logo", "Slogan", "Event Name", "Names & Numbers", "Custom Design"].map((item) => <span key={item} className="border-b border-border px-2 py-1 text-xs font-medium text-foreground/75">{item}</span>)}
                 </div>
               </div>
-              <ApparelImage src={festivalImage} alt="Matching theme T-shirts for a group celebration" className="group rounded-md border border-border" />
+              <ApparelImage src={festivalImage} alt="Matching theme T-shirts for a group celebration" className="group rounded-md border border-border [&_img]:aspect-auto [&_img]:h-64 sm:[&_img]:h-72 lg:[&_img]:h-[380px]" />
             </div>
           </div>
         </section>
