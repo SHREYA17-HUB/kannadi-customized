@@ -295,8 +295,8 @@ function Index() {
         </section>
 
         {/* Intro statement */}
-        <section className="border-b border-border bg-background py-7 sm:py-9">
-          <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+        <section className="border-b border-border bg-background py-6 sm:py-8">
+          <div className="mx-auto grid max-w-7xl gap-6 px-5 sm:px-8 lg:grid-cols-[1fr_1.2fr] lg:items-center">
             <h2 className="text-balance font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">A great T-shirt does more than look good — <span className="text-brand-red">it creates identity.</span></h2>
             <div>
               <p className="text-sm leading-7 text-muted-foreground">At KANNADI, we specialize in customized T-shirt manufacturing with solutions tailored to your requirements. Whether you need branded T-shirts for your employees, promotional T-shirts for a campaign, event T-shirts for a special occasion, or custom apparel for your team, we help turn your concept into reality.</p>
@@ -306,7 +306,7 @@ function Index() {
         </section>
 
         {/* About + Founder */}
-        <section id="about" className="bg-background py-10 sm:py-12">
+        <section id="about" className="bg-background py-8 sm:py-10">
           <div className="mx-auto grid max-w-7xl gap-6 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
             <div className="grid grid-cols-[1.6fr_1fr] items-start gap-3">
               <figure className="group row-span-2 overflow-hidden rounded-md border border-border">
@@ -340,10 +340,10 @@ function Index() {
         </section>
 
         {/* Collection */}
-        <section id="collection" className="bg-charcoal py-10 text-ivory sm:py-12">
+        <section id="collection" className="bg-charcoal py-8 text-ivory sm:py-10">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <SectionTitle eyebrow="Our Products" title="Customized T-Shirts & Apparel for Every Requirement" intro="We help transform your logo, artwork, brand identity, event concept or creative idea into customized apparel designed around your requirements." light />
-            <div className="mt-7 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {collections.map((item) => <article key={item.title} className="group flex flex-col overflow-hidden rounded-md border border-ivory/15 bg-charcoal transition-colors hover:border-primary/50">
                 <ApparelImage src={item.image} alt={item.imageAlt} />
                 <div className="flex flex-1 flex-col p-5">
@@ -364,10 +364,10 @@ function Index() {
         </section>
 
         {/* Styles + Theme T-Shirts */}
-        <section className="bg-background py-10 sm:py-12">
+        <section className="bg-background py-8 sm:py-10">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <SectionTitle eyebrow="T-Shirt Styles" title="Choose the Style That Fits Your Requirement" intro="Depending on your requirement, customized apparel can be developed in different styles." />
-            <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {styles.map(([name, text], index) => <article key={name} className="group overflow-hidden rounded-md border border-border bg-card transition-colors hover:border-primary/60">
                 <ApparelImage src={styleImages[index] ?? promotionalImage} alt={`${name} T-shirt showing its neckline, sleeves and full silhouette`} />
                 <div className="p-5">
@@ -376,7 +376,7 @@ function Index() {
                 </div>
               </article>)}
             </div>
-            <div className="mt-8 grid gap-6 border-y border-primary/30 py-7 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+            <div className="mt-6 grid gap-6 border-y border-primary/30 py-7 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div>
                 <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-primary">Theme T-Shirts</p>
                 <h3 className="mt-3 text-balance font-display text-2xl font-semibold leading-tight sm:text-3xl">T-Shirts That Tell Your Story</h3>
@@ -391,7 +391,7 @@ function Index() {
         </section>
 
         {/* Customization */}
-        <section id="customize" className="bg-charcoal py-10 text-ivory sm:py-12">
+        <section id="customize" className="bg-charcoal py-8 text-ivory sm:py-10">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div>
@@ -405,7 +405,7 @@ function Index() {
                   <figcaption className="mt-3 font-display text-lg italic text-ivory/65">Your design. Your brand. Your T-shirt.</figcaption>
                 </figure>
             </div>
-              <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {customizationOptions.map(([title, text], index) => <article key={title} className="group grid grid-cols-[112px_minmax(0,1fr)] items-center overflow-hidden rounded-md border border-ivory/15 bg-charcoal transition-colors hover:border-primary/50 sm:grid-cols-[96px_minmax(0,1fr)] lg:grid-cols-[128px_minmax(0,1fr)]">
                   <ApparelImage src={customizationImages[index] ?? embroideryImage} alt={customizationImageAlts[index] ?? "Customized apparel detail"} />
                   <div className="min-w-0 p-3">
@@ -418,10 +418,10 @@ function Index() {
         </section>
 
         {/* Industries */}
-        <section className="bg-background py-10 sm:py-12">
+        <section className="bg-background py-8 sm:py-10">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <SectionTitle eyebrow="Customized T-Shirts for Every Industry" title="Built for every industry." />
-            <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {industries.map(([title, text], index) => <article key={title} className="group grid grid-cols-[96px_1fr] overflow-hidden rounded-md border border-border bg-card sm:grid-cols-[112px_1fr]">
                 <ApparelImage src={industryImages[index] ?? corporateImage} alt={`Custom T-shirts for ${title?.toLowerCase() ?? "teams"}`} className="h-full [&_img]:h-full [&_img]:aspect-auto" />
                 <div className="min-w-0 p-4"><h3 className="font-display text-lg font-semibold">{title}</h3><p className="mt-2 text-[13px] leading-6 text-muted-foreground">{text}</p></div>
@@ -431,7 +431,7 @@ function Index() {
         </section>
 
         {/* Process */}
-        <section id="process" className="bg-secondary py-10 sm:py-12">
+        <section id="process" className="bg-secondary py-8 sm:py-10">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <SectionTitle eyebrow="From Your Design to Your T-Shirt" title="A simple customization process." />
             <ol className="mt-8 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
@@ -445,10 +445,10 @@ function Index() {
         </section>
 
         {/* Why choose */}
-        <section className="bg-background py-10 sm:py-12">
+        <section className="bg-background py-8 sm:py-10">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <SectionTitle eyebrow="Why Choose KANNADI?" title="Professional service, shaped around your requirement." />
-            <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
               {whyChoose.map(([title, text]) => <article key={title} className="rounded-md border border-border bg-card p-5 shadow-sm">
                 <Check className="h-5 w-5 text-brand-red" />
                 <h3 className="mt-4 font-display text-lg font-semibold leading-snug">{title}</h3>
@@ -459,7 +459,7 @@ function Index() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="relative bg-charcoal py-10 text-ivory sm:py-12">
+        <section id="contact" className="relative bg-charcoal py-8 text-ivory sm:py-10">
           <div className="heritage-pattern absolute inset-0 opacity-25" />
           <div className="relative mx-auto grid max-w-7xl gap-6 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr]">
             <div>
