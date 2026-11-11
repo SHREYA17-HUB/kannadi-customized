@@ -27,7 +27,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import logoAsset from "@/assets/kannadi-logo.jpeg.asset.json";
+import logoAsset from "@/assets/kannadi-logo-new.png.asset.json";
 import heroImage from "@/assets/kannadi-hero.jpg";
 import corporateImage from "@/assets/kannadi-corporate.jpg";
 import sportsImage from "@/assets/kannadi-sports-events.jpg";
@@ -215,7 +215,7 @@ function ApparelImage({ src, alt, className = "" }: { src: string; alt: string; 
 function Logo({ compact = false }: { compact?: boolean }) {
   return (
     <a href="#home" className="flex shrink-0 items-center gap-3" aria-label="KANNADI home">
-      <img src={logoAsset.url} alt="KANNADI logo" className={compact ? "h-11 w-11 rounded-full object-cover" : "h-14 w-14 rounded-full object-cover"} />
+      <img src={logoAsset.url} alt="KANNADI logo" width={56} height={56} className={compact ? "h-11 w-11 object-contain" : "h-14 w-14 object-contain"} />
       <div className="leading-none">
         <span className="font-display text-xl font-bold tracking-[0.12em] text-foreground">KANNADI</span>
         <span className="mt-1 block text-[9px] font-semibold uppercase tracking-[0.22em] text-primary">Custom Apparel</span>
@@ -489,7 +489,7 @@ function Index() {
       <footer className="border-t border-primary/25 bg-charcoal py-7 text-ivory">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 md:grid-cols-[1fr_auto] md:items-end">
           <div className="[&_span:first-of-type]:text-ivory"><Logo /><p className="mt-4 max-w-md text-sm leading-7 text-ivory/55">Customized T-shirts and apparel for businesses, institutions, teams, events and brands in Bangalore.</p><div className="mt-6 flex items-center gap-3">{socials.map(({ label, href, Icon }) => <a key={label} href={href} aria-label={`KANNADI on ${label}`} className="flex h-9 w-9 items-center justify-center rounded-full border border-ivory/15 text-ivory/60 transition-colors hover:border-primary hover:text-primary"><Icon className="h-4 w-4" /></a>)}</div></div>
-          <div className="md:text-right"><div className="flex flex-wrap gap-5 text-sm text-ivory/65 md:justify-end">{nav.map(([label, href]) => <a key={href} href={href} className="hover:text-primary">{label}</a>)}<a href="#contact" className="hover:text-primary">Contact</a></div><p className="mt-4 text-xs text-ivory/40">© {new Date().getFullYear()} KANNADI. All rights reserved.</p></div>
+          <div className="md:text-right"><div className="flex flex-wrap gap-5 text-sm text-ivory/65 md:justify-end">{nav.map(([label, href]) => <a key={href} href={href} className="hover:text-primary">{label}</a>)}<a href="#contact" className="hover:text-primary">Contact</a></div><p className="mt-4 text-xs leading-6 text-ivory/40">Copyright © 2026, All Rights Reserved, Made with ❤️ by <a href="https://webhostingbaba.com/" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">Hosting Baba</a></p></div>
         </div>
       </footer>
     </div>
