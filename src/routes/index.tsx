@@ -27,7 +27,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import logoAsset from "@/assets/kannadi-logo-new.png.asset.json";
+import logoAsset from "@/assets/kannadi-logo-latest.jpeg.asset.json";
 import heroImage from "@/assets/kannadi-hero.jpg";
 import corporateImage from "@/assets/kannadi-corporate.jpg";
 import sportsImage from "@/assets/kannadi-sports-events.jpg";
@@ -204,6 +204,12 @@ const whyChoose = [
   ["Professional Service", "A structured process from initial requirement discussion to final delivery."],
 ];
 
+const blogTopics = [
+  ["Choosing a T-shirt style", "Round neck, polo, V-neck or sports style: start with how your group plans to wear it." , Shirt],
+  ["Planning your custom design", "Bring together your logo, artwork, text and colours to shape a design around your purpose.", Palette],
+  ["Getting ready for a group order", "Consider your preferred styles, colours, sizes and quantities before sharing your requirements.", Layers3],
+];
+
 function ApparelImage({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
   return (
     <div className={`overflow-hidden bg-secondary ${className}`}>
@@ -239,7 +245,7 @@ function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [sent, setSent] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const nav = [["About", "#about"], ["Collection", "#collection"], ["Customize", "#customize"], ["Process", "#process"]];
+  const nav = [["About", "#about"], ["Collection", "#collection"], ["Customize", "#customize"], ["Process", "#process"], ["Blogs", "#blogs"]];
   const socials = [
     { label: "Instagram", href: "#", Icon: Instagram },
     { label: "YouTube", href: "#", Icon: Youtube },
@@ -463,6 +469,23 @@ function Index() {
           </div>
         </section>
 
+        {/* Blog topics */}
+        <section id="blogs" className="bg-secondary py-8 sm:py-10">
+          <div className="mx-auto max-w-7xl px-5 sm:px-8">
+            <SectionTitle eyebrow="From the KANNADI Journal" title="Ideas for your next custom T-shirt" intro="A few useful starting points for planning customized apparel." />
+            <div className="mt-6 grid gap-4 md:grid-cols-3">
+              {blogTopics.map(([title, text, Icon]) => {
+                const TopicIcon = Icon as typeof Shirt;
+                return <article key={title as string} className="rounded-md border border-border bg-card p-5">
+                  <TopicIcon className="h-5 w-5 text-primary" />
+                  <h3 className="mt-3 font-display text-xl font-semibold">{title as string}</h3>
+                  <p className="mt-2 text-[13px] leading-6 text-muted-foreground">{text as string}</p>
+                </article>;
+              })}
+            </div>
+          </div>
+        </section>
+
         {/* Contact */}
         <section id="contact" className="relative bg-charcoal py-8 text-ivory sm:py-10">
           <div className="heritage-pattern absolute inset-0 opacity-25" />
@@ -492,6 +515,9 @@ function Index() {
           <div className="md:text-right"><div className="flex flex-wrap gap-5 text-sm text-ivory/65 md:justify-end">{nav.map(([label, href]) => <a key={href} href={href} className="hover:text-primary">{label}</a>)}<a href="#contact" className="hover:text-primary">Contact</a></div><p className="mt-4 text-xs leading-6 text-ivory/40">Copyright © 2026, All Rights Reserved, Made with ❤️ by <a href="https://webhostingbaba.com/" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-primary">Hosting Baba</a></p></div>
         </div>
       </footer>
+      <a href="https://wa.me/918861888897" target="_blank" rel="noopener noreferrer" aria-label="Chat with KANNADI on WhatsApp" title="Chat on WhatsApp" className="fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-primary text-primary-foreground shadow-premium transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+        <svg viewBox="0 0 24 24" aria-hidden="true" className="h-7 w-7 fill-current"><path d="M20.52 3.48A11.83 11.83 0 0 0 12.1 0C5.55 0 .2 5.35.2 11.9c0 2.1.55 4.16 1.6 5.98L.1 24l6.28-1.65a11.9 11.9 0 0 0 5.7 1.45h.01c6.55 0 11.9-5.35 11.9-11.9 0-3.18-1.24-6.17-3.47-8.42ZM12.1 21.78h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.22-3.73.98.99-3.64-.24-.37a9.87 9.87 0 0 1-1.52-5.25c0-5.47 4.45-9.92 9.92-9.92a9.85 9.85 0 0 1 7.02 2.91 9.85 9.85 0 0 1 2.9 7.02c0 5.47-4.45 9.92-9.92 9.92Zm5.44-7.42c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.08-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z" /></svg>
+      </a>
     </div>
   );
 }
