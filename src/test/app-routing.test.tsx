@@ -36,4 +36,15 @@ describe("App routing", () => {
 
     await waitFor(() => expect(container.firstChild).not.toBeNull());
   });
+
+  it("links WhatsApp to the requested phone number", async () => {
+    const { getByRole } = renderAt("/");
+
+    await waitFor(() => {
+      expect(getByRole("link", { name: "Chat with KANNADI on WhatsApp" })).toHaveAttribute(
+        "href",
+        "https://wa.me/918861888897",
+      );
+    });
+  });
 });

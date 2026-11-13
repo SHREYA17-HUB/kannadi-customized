@@ -12,3 +12,7 @@
 - [x] Verify the compact layout and enquiry navigation
 - [x] Apply spacing-only refinements while preserving all existing design and content
 - [x] Verify desktop, tablet, mobile, and a single footer social area
+- [x] Add a compact Blogs section and navigation link
+- [x] Add a WhatsApp shortcut linked to 88618 88897
+- [x] Replace the displayed logo with the latest uploaded logo
+- [ ] Verify the new links and page layout on desktop and mobile
