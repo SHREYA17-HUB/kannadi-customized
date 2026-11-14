@@ -27,7 +27,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import logoAsset from "@/assets/kannadi-logo-latest.jpeg.asset.json";
+import logoAsset from "@/assets/kannadi-logo-upload-nov-2026.png.asset.json";
 import heroImage from "@/assets/kannadi-hero.jpg";
 import corporateImage from "@/assets/kannadi-corporate.jpg";
 import sportsImage from "@/assets/kannadi-sports-events.jpg";
