@@ -15,4 +15,5 @@
 - [x] Add a compact Blogs section and navigation link
 - [x] Add a WhatsApp shortcut linked to 88618 88897
 - [x] Replace the displayed logo with the latest uploaded logo
-- [ ] Verify the new links and page layout on desktop and mobile
+- [x] Update the displayed logo to the image uploaded on November 14, 2026
+- [x] Verify the logo update and page layout on desktop and mobile
